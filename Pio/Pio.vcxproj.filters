@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Pio">
+      <UniqueIdentifier>{2D15880B-991E-887C-229A-9E7C8EA2937C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Pio.h" />
+    <ClInclude Include="src\Pio\Application.h">
+      <Filter>Pio</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pio\Core.h">
+      <Filter>Pio</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pio\EntryPoint.h">
+      <Filter>Pio</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pio\Log.h">
+      <Filter>Pio</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Pio\Application.cpp">
+      <Filter>Pio</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pio\Log.cpp">
+      <Filter>Pio</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
