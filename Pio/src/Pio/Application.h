@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Core.h" //My very own created Core.h header I've seen this kind of file name in Godot's github repository.
+#include "Events/Event.h"
 
 namespace Pio {
 

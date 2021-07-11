@@ -4,6 +4,9 @@
     <Filter Include="Pio">
       <UniqueIdentifier>{2D15880B-991E-887C-229A-9E7C8EA2937C}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pio\Events">
+      <UniqueIdentifier>{718C067C-5D44-48C9-C64B-2125B222E3B9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pio.h" />
@@ -15,6 +18,12 @@
     </ClInclude>
     <ClInclude Include="src\Pio\EntryPoint.h">
       <Filter>Pio</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pio\Events\ApplicationEvent.h">
+      <Filter>Pio\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pio\Events\Event.h">
+      <Filter>Pio\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Pio\Log.h">
       <Filter>Pio</Filter>

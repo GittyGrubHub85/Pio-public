@@ -29,7 +29,7 @@ project "Pio"
 	filter "system:windows"
 		cppdialect "C++17"
 		staticruntime "On"
-		systemversion "10.0"
+		systemversion "latest"
 		
 		defines{
 			"PIO_PLATFORM_WINDOWS",
@@ -77,11 +77,10 @@ project "Sandbox"
 	filter "system:windows"
 		cppdialect "C++17"
 		staticruntime "On"
-		systemversion "10.0"
+		systemversion "latest"
 		
 		defines{
 			"PIO_PLATFORM_WINDOWS",
-			"PIO_BUILD_DLL"
 		}
 
 	filter "configurations:Debug"

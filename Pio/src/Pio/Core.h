@@ -10,3 +10,5 @@
 #else
 	#error Pio only supports Windows!
 #endif // PIO_PLATFORM_WINDOWS
+
+#define BIT(x) (1 << x)
