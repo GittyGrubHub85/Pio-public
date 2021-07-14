@@ -11,9 +11,9 @@ int main(int argc, char** argv) {
 	PIO_CORE_WARN("Initialized Log");
 	int a = 5;
 	PIO_INFO("Hello! Var={0}",a);
-	PIO_TRACE("PIO_TRACE");//This one doesn't show an output
+	//PIO_TRACE("PIO_TRACE");
 	//PIO_FATAL("a09diwa9d");//This one shows an error saying this is not a member
-	PIO_ERROR("PIO_ERROR");
+	//PIO_ERROR("PIO_ERROR");
 
 	auto app = Pio::CreateApplication();
 	app->Run();

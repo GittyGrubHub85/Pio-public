@@ -141,6 +141,8 @@
     <ClInclude Include="src\Pio\EntryPoint.h" />
     <ClInclude Include="src\Pio\Events\ApplicationEvent.h" />
     <ClInclude Include="src\Pio\Events\Event.h" />
+    <ClInclude Include="src\Pio\Events\KeyEvent.h" />
+    <ClInclude Include="src\Pio\Events\MouseEvent.h" />
     <ClInclude Include="src\Pio\Log.h" />
   </ItemGroup>
   <ItemGroup>

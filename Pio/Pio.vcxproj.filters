@@ -28,6 +28,8 @@
     <ClInclude Include="src\Pio\Log.h">
       <Filter>Pio</Filter>
     </ClInclude>
+    <ClInclude Include="src\Pio\Events\KeyEvent.h" />
+    <ClInclude Include="src\Pio\Events\MouseEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pio\Application.cpp">
