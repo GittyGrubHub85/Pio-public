@@ -25,11 +25,20 @@
     <ClInclude Include="src\Pio\Events\Event.h">
       <Filter>Pio\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Pio\Events\KeyEvent.h">
+      <Filter>Pio\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pio\Events\MouseEvent.h">
+      <Filter>Pio\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Pio\Log.h">
       <Filter>Pio</Filter>
     </ClInclude>
-    <ClInclude Include="src\Pio\Events\KeyEvent.h" />
-    <ClInclude Include="src\Pio\Events\MouseEvent.h" />
+    <ClInclude Include="src\Pio\Window.h">
+      <Filter>Pio</Filter>
+    </ClInclude>
+    <ClInclude Include="src\piopch.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pio\Application.cpp">
@@ -38,5 +47,7 @@
     <ClCompile Include="src\Pio\Log.cpp">
       <Filter>Pio</Filter>
     </ClCompile>
+    <ClCompile Include="src\piopch.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>

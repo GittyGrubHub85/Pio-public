@@ -2,7 +2,7 @@
 
 #include "Event.h"
 
-#include <sstream>
+//#include <sstream>
 
 namespace Pio {
 
@@ -35,5 +35,20 @@ namespace Pio {
 		int m_RepeatCount;
 	};
 
+	//I forgot to add this code before committed to 6 commits, it will be added on 7 commits
+	class PIO_API KeyReleasedEvent : public KeyEvent {
+	public:
+		KeyReleasedEvent(int keycode)
+			: KeyEvent(keycode) {}
 
+		std::string ToString() const override {
+			std::stringstream ss;
+			ss << "KeyReleasedEvent: " << m_KeyCode;
+			return ss.str();
+		}
+
+		EVENT_CLASS_TYPE(KeyReleased)
+	private:
+		int m_RepeatCount;
+	};
 }

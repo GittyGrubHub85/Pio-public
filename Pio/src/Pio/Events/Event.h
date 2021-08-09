@@ -1,9 +1,11 @@
 #pragma once
 
-#include "../Core.h"// the last time its directory was -> ../Pio/src/Pio/Core.h --- But Cherno's directory was "Hazel/Core.h"
+#include "Pio/Core.h"// the last time its directory was -> ../Pio/src/Pio/Core.h --- But Cherno's directory was "Hazel/Core.h" the answer was he added something in his solution's property. in C/C++ Additional directories there was "src;" in it.
 
-#include <string>
-#include <functional>
+//#include <string>
+//#include <functional>
+
+#include "piopch.h"
 
 namespace Pio {
 
