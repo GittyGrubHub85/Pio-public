@@ -12,6 +12,8 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "Pio/Log.h"
+
 #ifdef PIO_PLATFORM_WINDOWS
 	#include <Windows.h>
 #endif

@@ -151,16 +151,16 @@
     <ClInclude Include="src\Pio\Events\MouseEvent.h" />
     <ClInclude Include="src\Pio\Log.h" />
     <ClInclude Include="src\Pio\Window.h" />
-    <ClInclude Include="src\piopch.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\piopch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pio\Application.cpp" />
     <ClCompile Include="src\Pio\Log.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\piopch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="vendor\GLFW\GLFW.vcxproj">

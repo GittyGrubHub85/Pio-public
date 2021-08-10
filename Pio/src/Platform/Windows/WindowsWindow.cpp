@@ -1,6 +1,5 @@
 #include "piopch.h"
 #include "WindowsWindow.h"
-#include "Pio/Log.h"
 
 namespace Pio {
 	static bool s_GLFWInitialized = false;
