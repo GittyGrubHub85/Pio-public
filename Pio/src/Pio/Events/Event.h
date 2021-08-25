@@ -2,9 +2,6 @@
 
 #include "Pio/Core.h"// the last time its directory was -> ../Pio/src/Pio/Core.h --- But Cherno's directory was "Hazel/Core.h" the answer was he added something in his solution's property. in C/C++ Additional directories there was "src;" in it.
 
-//#include <string>
-//#include <functional>
-
 #include "piopch.h"
 
 namespace Pio {
@@ -77,7 +74,7 @@ namespace Pio {
 	private:
 		Event& m_Event;
 	};
-
+	
 	inline std::ostream& operator<<(std::ostream& os, const Event& e) {
 		return os << e.ToString();
 	}

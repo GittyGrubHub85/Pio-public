@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-//#include <sstream>
-
 namespace Pio {
 
 	class PIO_API MouseMovedEvent : public Event {
@@ -13,7 +11,7 @@ namespace Pio {
 
 		inline float GetX() const { return m_MouseX; }
 		inline float GetY() const { return m_MouseY; }
-
+		
 		std::string ToString() const override {
 			std::stringstream ss;
 			ss << "MouseMovedEvent: " << m_MouseX << ", " << m_MouseY;

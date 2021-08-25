@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-//#include <sstream>
-
 namespace Pio {
 
 	class PIO_API WindowResizeEvent : public Event {

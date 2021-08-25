@@ -10,10 +10,10 @@ workspace "Pio"
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 -- Include directories relative to root folder (solution directory)
-IncludeDir = {}
-IncludeDir["GLFW"] = "Pio/vendor/GLFW/include"
+IncludeDir = {} -- I don't know what this is...
+IncludeDir["GLFW"] = "Pio/vendor/GLFW/include" -- it includes in the additional Include directories
 
-include "Pio/vendor/GLFW"
+include "Pio/vendor/GLFW" --what does this thing do?
 
 project "Pio"
 	location "Pio"
