@@ -1,10 +1,12 @@
 #pragma once
 
 #include "Core.h" //My very own created Core.h header I've seen this kind of file name in Godot's github repository.
+
+#include "Window.h"
+#include "LayerStack.h"
 #include "Events/Event.h"
 #include "Events/ApplicationEvent.h"
-#include "Window.h"
-//#include "Platform/Windows/WindowsWindow.h"
+
 
 namespace Pio {
 
@@ -17,11 +19,15 @@ namespace Pio {
 		void Run();
 
 		void OnEvent(Event& e);
+
+		void PushLayer(Layer* layer);
+		void PushOverlay(Layer* layer);
 	private:
 		bool OnWindowClosed(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> m_Window;
 		bool m_Running = true;
+		LayerStack m_LayerStack;
 	};
 
 	// To be defined in the client

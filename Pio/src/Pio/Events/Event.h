@@ -47,8 +47,10 @@ namespace Pio {
 		inline bool IsInCategory(EventCategory category) {
 			return GetCategoryFlags() & category;
 		}
-	protected:
-		bool m_Handled = false;
+
+		bool Handled = false;
+	//protected://This is gone now
+	//	bool m_Handled = false;//This is gone now
 	};
 
 	class EventDispatcher { //Dispatcher means sender
@@ -66,7 +68,7 @@ namespace Pio {
 		template<typename T>
 		bool Dispatch(EventFn<T> func) {
 			if (m_Event.GetEventType() == T::GetStaticType()) {
-				m_Event.m_Handled = func(*(T*)&m_Event);
+				m_Event.Handled = func(*(T*)&m_Event);
 				return true;
 			}
 			return false;

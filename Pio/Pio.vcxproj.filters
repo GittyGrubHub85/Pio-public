@@ -37,6 +37,12 @@
     <ClInclude Include="src\Pio\Events\MouseEvent.h">
       <Filter>Pio\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Pio\Layer.h">
+      <Filter>Pio</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pio\LayerStack.h">
+      <Filter>Pio</Filter>
+    </ClInclude>
     <ClInclude Include="src\Pio\Log.h">
       <Filter>Pio</Filter>
     </ClInclude>
@@ -50,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pio\Application.cpp">
+      <Filter>Pio</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pio\Layer.cpp">
+      <Filter>Pio</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pio\LayerStack.cpp">
       <Filter>Pio</Filter>
     </ClCompile>
     <ClCompile Include="src\Pio\Log.cpp">

@@ -21,10 +21,24 @@ namespace Pio {
 
 	}
 
-	void Application::OnEvent(Event& e) {
+	void Application::PushLayer(Layer* layer) {
+		m_LayerStack.PushLayer(layer);
+	}
+	
+	void Application::PushOverlay(Layer* layer) {
+		m_LayerStack.PushOverlay(layer);
+	}
+
+	void Application::OnEvent(Event& e){
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVEN_FN(OnWindowClosed));
-		PIO_CORE_TRACE("{0}", e);
+		//PIO_CORE_TRACE("{0}", e);
+
+		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin(); ) {
+			(*--it)->OnEvent(e);
+			if (e.Handled)
+				break;
+		}
 	}
 
 	void Application::Run() {
@@ -32,9 +46,12 @@ namespace Pio {
 		while (m_Running) {
 			glClearColor(1, 0, 1, 1);
 			glClear(GL_COLOR_BUFFER_BIT);
+
+			for (Layer* layer : m_LayerStack)
+				layer->OnUpdate();
+
 			m_Window->OnUpdate();
 		}
-		//glfwTerminate(); //Removing this function in part 12 I already had OnWindowClosed now otherwise I get a GLFW not initialized error.
 	}
 
 	bool Application::OnWindowClosed(WindowCloseEvent& e) {

@@ -10,10 +10,10 @@ workspace "Pio"
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 -- Include directories relative to root folder (solution directory)
-IncludeDir = {} -- I don't know what this is...
-IncludeDir["GLFW"] = "Pio/vendor/GLFW/include" -- it includes in the additional Include directories
+IncludeDir = {}
+IncludeDir["GLFW"] = "Pio/vendor/GLFW/include"
 
-include "Pio/vendor/GLFW" --what does this thing do?
+include "Pio/vendor/GLFW"
 
 project "Pio"
 	location "Pio"
@@ -58,14 +58,17 @@ project "Pio"
 
 	filter "configurations:Debug"
 		defines "PIO_DEBUG"
+		buildoptions "/MDd" -- This is a multi-threaded debug (MDd)
 		symbols "On"
 	
 	filter "configurations:Release"
 		defines "PIO_RELEASE"
+		buildoptions "/MD" -- This is a multi-threaded DLL (MD)
 		symbols "On"
 
 	filter "configurations:Dist"
 		defines "PIO_DIST"
+		buildoptions "/MD" -- This is a multi-threaded DLL (MD)
 		symbols "On"
 
 project "Sandbox"
@@ -101,12 +104,15 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "PIO_DEBUG"
+		buildoptions "/MDd" -- This is a multi-threaded debug (MDd)
 		symbols "On"
 	
 	filter "configurations:Release"
 		defines "PIO_RELEASE"
+		buildoptions "/MD" -- This is a multi-threaded DLL (MD)
 		symbols "On"
 
 	filter "configurations:Dist"
 		defines "PIO_DIST"
+		buildoptions "/MD" -- This is a multi-threaded DLL (MD)
 		symbols "On"
