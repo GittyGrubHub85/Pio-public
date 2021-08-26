@@ -12,8 +12,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "Pio/vendor/GLFW/include"
+IncludeDir["Glad"] = "Pio/vendor/Glad/include"--I know it includes in the additional directories
 
 include "Pio/vendor/GLFW"
+include "Pio/vendor/Glad"--This includes in the References?
 
 project "Pio"
 	location "Pio"
@@ -34,11 +36,13 @@ project "Pio"
 	includedirs{
 		"%{prj.name}/vendor/spdlog/include",
 		"%{prj.name}/src",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links{
-		"GLFW",
+		"GLFW",--Responsible for making Glad appearing in the Solution Explorer?
+		"Glad",
 		"opengl32.lib"
 	}
 
@@ -49,7 +53,8 @@ project "Pio"
 		
 		defines{
 			"PIO_PLATFORM_WINDOWS",
-			"PIO_BUILD_DLL"
+			"PIO_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands{
