@@ -6,6 +6,7 @@
 #include "Pio/Application.h"
 #include "Pio/Layer.h"
 #include "Pio/Log.h"
+#include "Pio/ImGui/ImGuiLayer.h"
 
 // -- Entry Point (below) --
 #include "Pio/EntryPoint.h"

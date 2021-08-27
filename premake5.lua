@@ -13,9 +13,11 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["GLFW"] = "Pio/vendor/GLFW/include"
 IncludeDir["Glad"] = "Pio/vendor/Glad/include"--I know it includes in the additional directories
+IncludeDir["ImGui"] = "Pio/vendor/imgui"--I know it includes in the additional directories
 
 include "Pio/vendor/GLFW"
-include "Pio/vendor/Glad"--This includes in the References?
+include "Pio/vendor/Glad"--This includes in the References? No.
+include "Pio/vendor/imgui"--This includes in the References? It's responsible to make it appear in the Solutions Explorer.
 
 project "Pio"
 	location "Pio"
@@ -37,12 +39,14 @@ project "Pio"
 		"%{prj.name}/vendor/spdlog/include",
 		"%{prj.name}/src",
 		"%{IncludeDir.GLFW}",
-		"%{IncludeDir.Glad}"
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.ImGui}"
 	}
 
 	links{
-		"GLFW",--Responsible for making Glad appearing in the Solution Explorer?
+		"GLFW",--Responsible for making Glad appearing in the Solution Explorer? No. Probably References?
 		"Glad",
+		"ImGui",
 		"opengl32.lib"
 	}
 

@@ -4,3 +4,6 @@
 [submodule "Pio/vendor/GLFW"]
 	path = Pio/vendor/GLFW
 	url = https://github.com/GittyGrubHub85/glfw
+[submodule "Pio/vendor/imgui"]
+	path = Pio/vendor/imgui
+	url = https://github.com/GittyGrubHub85/imgui

@@ -19,6 +19,7 @@ class Sandbox : public Pio::Application { //Sandbox class inherits the Pio Engin
 public:
 	Sandbox() {
 		PushLayer(new ExampleLayer());
+		PushOverlay(new Pio::ImGuiLayer()); 
 	}
 	~Sandbox() {
 

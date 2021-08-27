@@ -5,11 +5,18 @@
 
 #include <glad/glad.h>
 
+//had helped me with this video https://www.youtube.com/watch?v=mS9755gF66w&ab_channel=TheCherno
+
 namespace Pio {
 
 #define BIND_EVEN_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
+	
+	Application* Application::s_Instance = nullptr;
 
 	Application::Application() {
+		PIO_CORE_ASSERT(!s_Instance,"Application already exists!")
+		s_Instance = this;
+
 		m_Window = std::unique_ptr<Window>(Window::Create());
 		m_Window->SetEventCallback(BIND_EVEN_FN(OnEvent));
 
@@ -23,10 +30,12 @@ namespace Pio {
 
 	void Application::PushLayer(Layer* layer) {
 		m_LayerStack.PushLayer(layer);
+		layer->OnAttach();
 	}
 	
 	void Application::PushOverlay(Layer* layer) {
 		m_LayerStack.PushOverlay(layer);
+		layer->OnAttach();
 	}
 
 	void Application::OnEvent(Event& e){
@@ -58,7 +67,5 @@ namespace Pio {
 		m_Running = false;
 		return true;
 	}
-
-	
 
 }
